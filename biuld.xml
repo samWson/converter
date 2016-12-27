@@ -1,0 +1,25 @@
+<project name="converter" basedir="." default="main">
+
+  <property name="src.dir" value="src"/>
+  <property name="build.dir" value="build"/>
+  <property name="classes.dir" value="${build.dir}/classes"/>
+  <property name="main.class" value="converter.Main"/>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${classes.dir}"/>
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true"/>
+  </target>
+
+  <target name="run" depends="compile">
+    <java classpath="${classes.dir}" classname="main.class"/>
+  </target>
+
+  <target name="clean-compile" depends="clean, compile"/>
+
+  <target name="main" depends="clean, run"/>
+  
+</project>
