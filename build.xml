@@ -15,7 +15,7 @@
   </target>
 
   <target name="run" depends="compile">
-    <java classpath="${classes.dir}" classname="main.class"/>
+    <java classpath="${classes.dir}" classname="${main.class}"/>
   </target>
 
   <target name="clean-compile" depends="clean, compile"/>
