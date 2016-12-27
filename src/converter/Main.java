@@ -14,7 +14,11 @@ public class Main {
 	
 	
 	if (args.length == 0) {
+	    // If there are no arguments, print help and exit program.
 	    System.out.println(help);
+	    System.exit(0);
 	}
+
+	
     }
 }
