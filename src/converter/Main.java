@@ -2,12 +2,18 @@ package converter;
 
 public class Main {
 
+    // The number of miles in a kilometer.
+    private static final double MILES_IN_KILOMETER = 1.6026;
+
+    // The number of kilometers in a mile.
+    private static final double KILOMETERS_IN_MILE = 0.624;
+
     /**
        Convert miles per hour to kilometers per hour.
        @param mph the mile per hour value to be converted
        @return the converted value
     */
-    double mphToKph(double mph) {
+    private static double mphToKph(double mph) {
 	return mph * MILES_IN_KILOMETER;
     }
 	
@@ -16,7 +22,7 @@ public class Main {
        @param kph the kilometer per hour vaule to be converted
        @return the converted value
     */
-    double kphToMph(double kph) {
+    private static double kphToMph(double kph) {
 	return kph * KILOMETERS_IN_MILE;
     }
 	
@@ -26,13 +32,8 @@ public class Main {
        @param args the command line arguments
     */
     public static void main(String[] args) {
-
-	// The number of miles in a kilometer.
-	final double MILES_IN_KILOMETER = 1.6026;
-
-	// The number of kilometers in a mile.
-	final double KILOMETERS_IN_MILE = 0.624;
-
+	
+	
 	// Command line help message.
 	final String help = new StringBuilder( "Usage: converter [-options] [args...]\n")
 	    .append("(to convert a value)\n")
@@ -63,8 +64,8 @@ public class Main {
 	    System.out.println(RESULT + " kph");
 	    break;
 	case "-kph":
-	    //RESULT = kphToMph(VAULE);
-	    //System.out.println(RESULT + " mph");
+	    RESULT = kphToMph(VAULE);
+	    System.out.println(RESULT + " mph");
 	    break;
 	}
 	
