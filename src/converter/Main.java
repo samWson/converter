@@ -59,11 +59,11 @@ public class Main {
 	final double RESULT;
 
 	switch (CONVERSION) {
-	case "-mph":
+	case "-kph":
 	    RESULT = mphToKph(VAULE);
 	    System.out.println(RESULT + " kph");
 	    break;
-	case "-kph":
+	case "-mph":
 	    RESULT = kphToMph(VAULE);
 	    System.out.println(RESULT + " mph");
 	    break;
