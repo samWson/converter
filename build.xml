@@ -4,7 +4,7 @@
   <property name="build.dir" value="build"/>
   <property name="classes.dir" value="${build.dir}/classes"/>
   <property name="main.class" value="converter.Main"/>
-  <property name="jar.dir" value="${build.dir}/jar"/>
+  <property name="jar.dir" value="${build.dir}/libs"/>
   <property name="test.dir" value="src/test/java"/>  
 
   <target name="clean">
